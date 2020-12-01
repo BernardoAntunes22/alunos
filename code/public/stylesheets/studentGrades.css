@@ -1,0 +1,47 @@
+main {
+    grid-column: 1 / 4;
+    width: 100%;
+    display: flex;
+}
+
+#grades{
+    width: 100%;
+    display: flex;
+}
+
+.grade-card {
+    width: fit-content;
+    padding: 2vh;
+    background-color: rgb(96, 210, 245);
+    color: rgb(90, 104, 228);
+    margin: 1vh;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    font-size: 17;
+}
+
+.failed {
+    background-color: brown;
+    color: cornsilk;
+
+}
+
+.navSG {
+    background-color: white;
+    border: 3px solid blueviolet;
+    font-size: 20;
+}
+
+.header { grid-area: header; }
+.navSG { grid-area: nav; }
+.mainSG { grid-area: main; }
+
+.gridSG {
+    display: grid;
+    grid-template-columns: 10% auto auto auto auto auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'header header header header header header header'
+      'nav main main main main main main';
+}

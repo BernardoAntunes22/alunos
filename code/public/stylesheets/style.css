@@ -50,7 +50,7 @@ header div{
 
 footer{
   background-color: blueviolet;
-  padding: 10px 0px 0px 170px;
+  text-align: center;
 
 }
 
@@ -84,4 +84,15 @@ aside{
   margin-bottom: 1px;
   border-style: solid;
   border-color: blueviolet;
+}
+
+
+#links a{
+  text-decoration: none;
+  color: blueviolet;
+}
+
+#links2 a{
+  text-decoration: none;
+  color: black;
 }
