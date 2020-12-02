@@ -9,54 +9,56 @@
   <body>
     <header class="header">
       <div>
-        <a href="index.html"> <img id="alunos1" src="images\Alunos.png"> </a> 
+        <a href="index.html"> <img id="alunos1" src="images\Alunos.png" /> </a>
         <h1>Learning Plataform</h1>
         <h2>This platform will help you manage your classes</h2>
       </div>
     </header>
-    <form id="gForm">
-      <h1>Form</h1>
+    <main>
+      <form id="gForm">
+        <h1>Grade a student</h1>
+ 
+        <label for="sname"><b>Student Name </b></label>
+        <select name="sname" id="sname" required></select>
+        <p>
+          <label for="uname"><b>Unit Name </b></label>
+          <select name="uname" id="uname" required></select>
+        </p>
 
+        <p>
+          <label for="grade"><b>Project grade</b></label>
+          <input type="number" name="projectg" id="projectg" required />
 
-      <label for="sname"><b>Student Name </b></label>
-      <select name="sname" id="sname" required></select>
-      <p>
-        <label for="uname"><b>Unit Name </b></label>
-        <select name="uname" id="uname" required></select>
-      </p>
+          <label for="percentage"><b>Project percentage</b></label>
+          <input type="text" id="projectp" name="projectp" required />
+        </p>
 
-      <p>
-        <label for="grade"><b>Project grade</b></label>
-        <input type="number" name="projectg" id="projectg" required />
+        <p class="hidden error" id="projectError">
+          Please fill out test details (the grade must be between 0 and 20).
+        </p>
+        <p></p>
 
-        <label for="percentage"><b>Project percentage</b></label>
-        <input
-          type="text"
-          id="projectp"
-          name="projectp"
-          min="0"
-          max="1"
-          required
-        />
-      </p>
+        <label for="grade"><b>Test grade</b></label>
+        <input type="number" name="testg" id="testg" required />
 
-      <p class = "hidden error" id="projectError">Please fill out test details (the grade must be between 0 and 20).</p>
-      <p></p>
+        <label for="percentage"><b>Test percentage</b></label>
+        <input type="text" id="testp" name="testp" min="0" max="1" required />
+        <p class="hidden error" id="testError">
+          Please fill out project details (the grade must be between 0 and 20).
+        </p>
+        <p></p>
+        <p class="hidden error" id="sumPercError">
+          Percentages don't add up to 100.
+        </p>
+        <button class="button" type="button" value="calc" onclick="calculate()">
+          Calculate
+        </button>
+        <button class="button" type="reset" value="reset" onclick="reset()">
+          Reset
+        </button>
+      </form>
 
-      <label for="grade"><b>Test grade</b></label>
-      <input type="number" name="testg" id="testg" required />
-
-      <label for="percentage"><b>Test percentage</b></label>
-      <input type="text" id="testp" name="testp" min="0" max="1" required />
-      <p class = "hidden error" id="testError">Please fill out project details (the grade must be between 0 and 20).</p>
-      <p></p>
-      <p class = "hidden error" id="sumPercError">Percentages don't add up to 100.</p>
-      <button type="button" value="calc" onclick="calculate()">
-        Calculate
-      </button>
-      <button type="reset" value="reset" onclick="reset()">Reset</button>
-    </form>
-
-    <p id="output"></p>
+      <p id="output"></p>
+    </main>
   </body>
 </html>
